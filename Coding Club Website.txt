@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>Scarlet Theme</title>
+
+    </head>
+
+    <style>
+
+    body{
+
+        background-color:rgb(240,240,240);
+
+    }
+
+      .title{
+
+          font-family: sans-serif;
+
+          padding:40px;
+
+          margin:-10px -10px -10px -10px;
+
+          background-color:rgb(133, 27, 27);
+
+          color:rgb(255, 255, 255);
+
+          box-shadow:0px 2px 5px #888;
+
+      }
+  
+      h2, p{
+
+        font-family: sans-serif;
+
+          padding:40px;
+
+          margin:10px 10px 10px 10px;
+
+          color:rgb(38, 38, 38);
+
+          box-shadow:0px 1px 5px #888;
+  
+          border:1px solid rgb(232, 232, 232);
+
+          background-color:rgb(255, 255, 255);
+
+      }
+
+      h2{
+
+          font-size:14px;
+  
+          text-align:center;
+
+      }
+
+      p{
+
+          font-size:12px;
+          
+      }
+
+      img{
+
+          padding-bottom:20px;
+
+      }
+
+    </style>
+
+    <body>
+
+
+<div class="title">
+<h3>Arcadia High School</h3>
+<h1>Coding Club</h1>
+
+</div>
+<br>
+
+<br>
+<h2><img src="http://ahs.ausd.net/modules/groups/homepagefiles/cms/1414168/Image/Arcadia%20High%20Exterior%20Brochure(1).jpg" alt="Arcadia High School Administration Building" width="100%">Arcadia High School</h2>
+
+<br>
+
+<p>Coding Club aims to educate students at Arcadia High School about coding languages and to unite those with common interests.</p>
+
+
+    </body>
+
+</html>
