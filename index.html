@@ -7,6 +7,41 @@
         <meta charset="utf-8">
 
         <title>AHS Coding Club</title>
+        
+        <script> 
+        	//authors: Sam: hidingclass, fadeinoutwithmouseover
+            
+        	var hidingClass,fadeInOutWithMouseover;
+            var b=true,ccc = function(mmm){if(b) b=confirm(mmm);};
+            //the editor I was working on had an issue with infinate alert()s
+            
+        	window.onload = function(){
+            	hidingClasses();
+            };
+            hidingClasses = function(){
+            	var hidingElements = document.getElementsByClassName("hiding");
+                for(var a in hidingElements)
+                fadeInOutWithMouseover(hidingElements[a]);
+            };
+        	fadeInOutWithMouseover = function(el){
+            	var fader = function(){};
+                var p = 0; el.style.opacity = 0;
+                window.setInterval(function(){fader();},20);
+                el.onmouseover = function(){fader = function(){
+                	if(p>=1) return;
+                    p+=(1-p)*0.1+0.001;
+                    el.style.opacity = p;
+                };};
+                el.onmouseout  = function(){fader = function(){
+                	if(p<=0) return;
+                    p-=(p)*0.1+0.001;
+                    el.style.opacity = p;
+                };};
+            };
+        	
+        </script>
+
+    </head>
 
     </head>
 
@@ -151,6 +186,14 @@
         <br>
         The new Coding Club 2017-2018 Officers have been announced! See the updated list in the "2017-2018 Officers" section to the left. 
         <br>
+    </p>
+    
+    
+    <p class="hiding">
+    	You found a potato!
+        <br>
+        <br>
+        <img src="https://potatohack.files.wordpress.com/2016/12/d2be7-potato.gif" alt="potato" width=100%></img>
     </p>
     
     
