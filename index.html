@@ -23,16 +23,16 @@
                 for(var a in hidingElements) fadeInOutWithMouseover(hidingElements[a]);
             };
             fadeInOutWithMouseover = function(el){
-                var fader = null;
+                var fader = function(){};
                 var p = 0; el.style.opacity = 0;
                 window.setInterval(function(){fader();},20);
                 el.onmouseover = function(){fader = function(){
-                    if(p>=1){fader = null;return;}
+                    if(p>=1){fader = function(){};return;}
                     p+=(1-p)*0.1+0.001;
                     el.style.opacity = p;
                 };};
                 el.onmouseout  = function(){fader = function(){
-                    if(p<=0){fader = null;return;}
+                    if(p<=0){fader = function(){};return;}
                     p-=(p)*0.1+0.001;
                     el.style.opacity = p;
                 };};
