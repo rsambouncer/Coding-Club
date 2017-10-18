@@ -12,7 +12,7 @@
             //authors: Sam: hidingclass, fadeinoutwithmouseover
             
             var hidingClass,fadeInOutWithMouseover;
-            var b=true,ccc = function(mmm){if(b) b=confirm(mmm);};
+            var bForCCC=true,ccc = function(mmm){if(bForCCC) bForCCC=confirm(mmm);};
             //the editor I was working on had an issue with infinate alert()s
             
             window.onload = function(){
@@ -20,7 +20,7 @@
             };
             hidingClasses = function(){
                 var hidingElements = document.getElementsByClassName("hiding");
-                for(var a in hidingElements) fadeInOutWithMouseover(hidingElements[a]);
+                for(var a=0;a<hidingElements.length;a++) fadeInOutWithMouseover(hidingElements[a]);
             };
             fadeInOutWithMouseover = function(el){
                 var fader = function(){};
