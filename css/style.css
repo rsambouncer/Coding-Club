@@ -35,12 +35,12 @@ a:visited {
 
 a,
 a:visited {
-    color: #00ad4a;
+    color: #00ad4a !important;
 }
 
 a:hover,
 a:focus {
-    color: #08dd5d;
+    color: #08dd5d !important;
 }
 
 /* Buttons override */
@@ -235,10 +235,6 @@ ul.officer-social li a {
 
 ul.officer-social li a:hover {
     text-decoration: none;
-}
-
-a span.ti-facebook {
-    color: #3b5998;
 }
 
 a span.ti-twitter-alt {
