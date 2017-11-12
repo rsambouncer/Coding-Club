@@ -7,7 +7,7 @@ coderain.width = window.innerWidth;
 window.onload = window.onresize = function () {
     //making the canvas full screen
     coderain.height = document.getElementById("home").clientHeight;
-    coderain.width = window.innerWidth;
+    coderain.width = document.getElementById("home").clientWidth;
 }
 
 //define character set
