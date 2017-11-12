@@ -1,268 +1,376 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AHS Coding Club single page bootstrap website">
+    <meta name="author" content="Alex Liu">
+    <title>AHS Coding Club</title>
 
-    <head>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/themify-icons.css" rel="stylesheet">
+    <link href='css/dosis-font.css' rel='stylesheet' type='text/css'>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
 
-        <meta charset="utf-8">
+<body id="page-top" data-spy="scroll" data-target=".side-menu">
+    <nav class="side-menu">
+        <ul>
+            <li class="hidden active">
+                <a class="page-scroll" href="#page-top"></a>
+            </li>
+            <li>
+                <a href="#home" class="page-scroll">
+                        <span class="menu-title">Home</span>
+                        <span class="dot"></span>
+                    </a>
+            </li>
+            <li>
+                <a href="#information" class="page-scroll">
+                        <span class="menu-title">Information</span>
+                        <span class="dot"></span>
+                    </a>
+            </li>
+            <li>
+                <a href="#officers" class="page-scroll">
+                        <span class="menu-title">Officers</span>
+                        <span class="dot"></span>
+                    </a>
+            </li>
+            <li>
+                <a href="#schedule" class="page-scroll">
+                        <span class="menu-title">Schedule</span>
+                        <span class="dot"></span>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <canvas id="coderain"></canvas>
+    <div class="container-fluid">
+        <!-- Start: Header -->
+        <div class="row hero-header" id="home">
+            <div class="col-md-7">
+                <img src="img/meetup-logo.png" class="logo">
+                <h1>Get smart with code</h1>
+                <h3>and let's unite our common interests</h3>
+                <h4>Every Thursday Lunch in Room C108</h4>
+                <a href="#" class="btn btn-lg btn-red">Check In&nbsp;<span class="ti-arrow-right"></span></a>
 
-        <title>AHS Coding Club</title>
-        
-        <script> 
-            //authors: Sam: hidingclass, fadeinoutwithmouseover
-            
-            var hidingClass,fadeInOutWithMouseover;
-            var bForCCC=true,ccc = function(mmm){if(bForCCC) bForCCC=confirm(mmm);};
-            //the editor I was working on had an issue with infinate alert()s
-            
-            window.onload = function(){
-                hidingClasses();
-            };
-            hidingClasses = function(){
-                var hidingElements = document.getElementsByClassName("hiding");
-                for(var a=0;a<hidingElements.length;a++) fadeInOutWithMouseover(hidingElements[a]);
-            };
-            fadeInOutWithMouseover = function(el){
-                var fader = function(){};
-                var p = 0; el.style.opacity = 0;
-                window.setInterval(function(){fader();},20);
-                el.onmouseover = function(){fader = function(){
-                    if(p>=1){fader = function(){};return;}
-                    p+=(1-p)*0.1+0.001;
-                    el.style.opacity = p;
-                };};
-                el.onmouseout  = function(){fader = function(){
-                    if(p<=0){fader = function(){};return;}
-                    p-=(p)*0.1+0.001;
-                    el.style.opacity = p;
-                };};
-            };
-        	
-        </script>
-
-    </head>
-
-    <style>
-    body{
-        background-color:rgb(240,240,240);
-    }
-      .title{
-          font-family: helvetica;
-          padding:70px;
-          line-height:1.0;
-          background-color:rgb(47, 173, 55);
-          color:rgb(255, 255, 255);
-          text-align: left;
-      }
-  
-      h2, p{
-        font-family: sans-serif;
-          padding:40px;
-          margin:35px 0px 35px 0px;
-          color:rgb(38, 38, 38);
-          background-color:rgb(255, 255, 255);
-      }
-      h2{
-          font-size:14px;
-  
-          text-align:center;
-      }
-      p{
-          font-size:12px;
-          
-      }
-      img{
-          padding-bottom:20px;
-          display: block;
-          margin: 0 auto;
-      }
-      #outer-container{
-          min-width: 800px;
-      }
-      .news{
-          float: left;
-          margin-left:-10;
-          max-width: 60%;
-          padding: 1em;
-      }
-
-      article {
-          margin-left: 60%;
-          padding: 1em;
-          overflow: hidden;
-      }
-
-    </style>
-
-    <body>
-
-        <div class="title">
-            <h3 style="font-size:40px">Arcadia High School</h3>
-            <h1 style="font-size:100px">Coding Club</h1>
+            </div>
+            <!-- Right side icon -->
+            <!--
+<div class="col-md-5 hidden-xs">
+<img src="file.png">
+</div>
+-->
         </div>
-   
-<br>
+        <!-- End: Header -->
+    </div>
+    <div class="container">
 
-<div id="outer-container">
-<div class="news">
-    
-    <p>Code Day LA is tomorrow! Use the promo code "ARCADIA" for 20% off!</p>
-    
-    <p><img src="http://lg.sanitytechnology.com.au/OverTheWire.png" width="30%">
-        <b>HTML Presentation Resources</b> - from 11/2 HTML Presentation
-        <br>
-        <br>
-        <b>Cybersecurity Links</b>
-        <br>
-        <a href="http://overthewire.org/wargames/natas/">Natas</a>
-        <br>
-        <a href="http://overthewire.org/wargames/bandit/">Bandit</a>
-        <br>
-        Keep in mind that many of these activities may require research! If you are stuck, feel free to head over to YouTube for pointers or ask in the Coding Club Facebook page <a href="https://www.facebook.com/groups/ahscodingclub/">here.</a>
-        <br>
-        <br>
-        <b>Learning and Coding Websites</b>
-        <br>
-        <a href="https://neocities.org/">Neocities</a>
-        <br>
-        <a href="https://www.khanacademy.org/computing/computer-programming/html-css">Khan Academy</a>
-        <br>
-        <a href="https://www.w3schools.com/html/html_basic.asp">W3 Schools</a>
-        </p>
-    
-    <p> <img src="https://preview.ibb.co/m2WKAb/Code_Club_Poster_1.png" width="50%"> Arcadia High School's Club Day will be held on October 10 and 11 at Lunch in the Rally Court! Coding Club will have a booth up on Wednesday, October 11. Stop by and say hi! Officers will be giving handouts and managing sign ups for the coming school year. If you aren't able to make it, feel free to come to our weekly lunch meetings, beginning on Thursday, October 19 in C108 at lunch.
-    </p>
-    
-    <p><img src="https://preview.ibb.co/dxcLxa/field_elementary_pasadena.jpg" width="100%">Four officers, Patrick Liu, Sandra Tang, Stella Saw and Samuel Berkun, volunteered at Field Elementary School in Pasadena. They taught kids how to code through Hour of Code, Scratch, and HTML. Students also experienced playing Minecraft with a keyboard and monitor hooked up to a Raspberry Pi. </p> 
-   
-   <p>
-    <b>Overview</b>
-        <br>
-        Coding Club aims to educate students at Arcadia High School about coding languages and to unite those with common interests. Meetings are held in C108 at Lunch in Mr. Villalobos's room. 
-        <br>
-        Provide feedback and suggestions in our <a href="https://docs.google.com/a/students.ausd.net/forms/d/e/1FAIpQLSer3745BwkZs9SbjgZ9ghKmkrUEiWn3-czVb-x9GoWkqgxKdg/viewform">Google Form</a>. 
+        <!-- Start: Information -->
+        <div class="row me-row content-ct" id="information">
+
+            <h2 class="row-title">Information</h2>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#announcements" aria-controls="home" role="tab" data-toggle="tab">Announcements</a></li>
+                <li role="presentation"><a href="#news" aria-controls="profile" role="tab" data-toggle="tab">News</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content" id="information-tabs">
+                <div role="tabpanel" class="tab-pane fade in active" id="announcements">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <!-- Start: Example Blog Post -->
+                            <!--
+<h1>Hello, World!</h1>
+<p>This is an example blog post, coded in multiple lines but displayed as one single paragraph:
+'Ah, this line break is such a relief on the eyes–'
+You can use separate paragraphs in here as well...
 </p>
-<p>
-    <b>2017-2018 Officers</b>
-        <br>
-        President: Sandra Tang
-        <br>
-        Vice President: Patrick Liu
-        <br>
-        Secretary: Ryan Wang
-        <br>
-        Treasurer: Stella Saw
-        <br>
-        ICC Representative: Samuel Berkun
-    <br>
-    <br>
-    <b>2015-2017 Officers and Founders</b>
-        <br>
-        President: Stanley Yu
-        <br>
-        Vice President: Justin Tay
-        <br>
-        Secretary: Jacky Chin
-        <br>
-        Treasurer: Derina Chou
-        <br>
-        ICC Representative: Siddharth Rao
+<p>'Wow!' This sure looks interesting.
+The title goes in h1, and the body is coded in paragraphs.
+As shown below, you can also use bootstrap badges and labels to timestamp and tag your posts!
 </p>
-    
-<p><img src="https://www.aha.io/assets/github.7433692cabbfa132f34adb034e7909fa.png" width="30%">Want to contribute to the website? Fork it on Github <a href="https://github.com/SandraTang/Coding-Club">here!</a></p> 
-   
+<div>
+<span class="badge">Posted 2012-08-02 20:47:04</span>
+<div class="pull-right">
+<span class="label label-default">intro</span>
+<span class="label label-primary">story</span>
+<span class="label label-success">blog</span>
+<span class="label label-info">personal</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>
+</div>
+</div>
+<hr>
+-->
+                            <!-- End: Example Blog Post -->
+                            <!-- Start: CodeDay LA -->
+                            <h1>CodeDay LA</h1>
+                            <p>It's tomorrow, so hurry and <a href="https://codeday.org/la">get your tickets</a>! Just 'cuz we're nice, use the promo code "ARCADIA" for <b>20% OFF</b> the original price.
+                            </p>
+                            <div>
+                                <span class="badge">Posted 11/09/2017</span>
+                                <div class="pull-right">
+                                    <span class="label label-default">Hackathon</span>
+                                    <span class="label label-success">Promotion</span>
+                                    <span class="label label-danger">Late</span>
+                                </div>
+                            </div>
+                            <!-- End: CodeDay LA -->
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="news">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <!-- Start: 11/09/2017 -->
+                            <h3>11/09/2017</h3>
+                            <p>The Kahoot and Bandit winners recieved candy and chocolate prizes! Also, the officers taught the basics of CSS and challenged club members to recreate a GIF using CSS and also create the worst website possible. Presentation <a href="https://docs.google.com/presentation/d/18TqqC8yRCHhIzjQse9zmEVKCAccTbZAWt4LBPM__pzQ/edit?usp=sharing">here</a>.
+                            </p>
+                            <!-- End: 11/09/2017 -->
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: Information -->
+
+        <!-- Start: Officers -->
+        <div class="row me-row content-ct officer" id="officers">
+            <h2 class="row-title">Meet the Officers</h2>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#2018" aria-controls="home" role="tab" data-toggle="tab">Officers <small class="hidden-xs">(2017-2018)</small></a></li>
+                <li role="presentation"><a href="#2017" aria-controls="profile" role="tab" data-toggle="tab">Founders <small class="hidden-xs">(2015-2017)</small></a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade active in" id="2018">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 feature">
+                            <img src="img/speaker-1.png" class="officer-img">
+                            <h3>Sandra Tang</h3>
+                            <h5>President</h5>
+                            <ul class="officer-social">
+                                <li><a href="#"><span class="ti-facebook"></span></a></li>
+                                <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+                                <li><a href="#"><span class="ti-linkedin"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-6 feature">
+                            <img src="img/speaker-2.png" class="officer-img">
+                            <h3>Patrick Liu</h3>
+                            <h5>Vice President</h5>
+                            <ul class="officer-social">
+                                <li><a href="#"><span class="ti-facebook"></span></a></li>
+                                <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+                                <li><a href="#"><span class="ti-linkedin"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-6 feature">
+                            <img src="img/speaker-3.png" class="officer-img">
+                            <h3>Ryan Wang</h3>
+                            <h5>Secretary</h5>
+                            <ul class="officer-social">
+                                <li><a href="#"><span class="ti-facebook"></span></a></li>
+                                <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+                                <li><a href="#"><span class="ti-linkedin"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-6 feature">
+                            <img src="img/speaker-4.png" class="officer-img">
+                            <h3>Stella Saw</h3>
+                            <h5>Treasurer</h5>
+                            <ul class="officer-social">
+                                <li><a href="#"><span class="ti-facebook"></span></a></li>
+                                <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+                                <li><a href="#"><span class="ti-linkedin"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-6 feature">
+                            <img src="img/speaker-5.png" class="officer-img">
+                            <h3>Samuel Berkun</h3>
+                            <h5>ICC Representative</h5>
+                            <ul class="officer-social">
+                                <li><a href="#"><span class="ti-facebook"></span></a></li>
+                                <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+                                <li><a href="#"><span class="ti-linkedin"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="2017">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 feature">
+                            <img src="img/speaker-1.png" class="officer-img">
+                            <h3>Stanley Yu</h3>
+                            <h5>President</h5>
+                            <ul class="officer-social">
+                                <li><a href="#"><span class="ti-facebook"></span></a></li>
+                                <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+                                <li><a href="#"><span class="ti-linkedin"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-6 feature">
+                            <img src="img/speaker-2.png" class="officer-img">
+                            <h3>Justin Tay</h3>
+                            <h5>Vice President</h5>
+                            <ul class="officer-social">
+                                <li><a href="#"><span class="ti-facebook"></span></a></li>
+                                <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+                                <li><a href="#"><span class="ti-linkedin"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-6 feature">
+                            <img src="img/speaker-3.png" class="officer-img">
+                            <h3>Jacky Chin</h3>
+                            <h5>Secretary</h5>
+                            <ul class="officer-social">
+                                <li><a href="#"><span class="ti-facebook"></span></a></li>
+                                <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+                                <li><a href="#"><span class="ti-linkedin"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-6 feature">
+                            <img src="img/speaker-4.png" class="officer-img">
+                            <h3>Derina Chou</h3>
+                            <h5>Treasurer</h5>
+                            <ul class="officer-social">
+                                <li><a href="#"><span class="ti-facebook"></span></a></li>
+                                <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+                                <li><a href="#"><span class="ti-linkedin"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-6 feature">
+                            <img src="img/speaker-5.png" class="officer-img">
+                            <h3>Siddharth Rao</h3>
+                            <h5>ICC Representative</h5>
+                            <ul class="officer-social">
+                                <li><a href="#"><span class="ti-facebook"></span></a></li>
+                                <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+                                <li><a href="#"><span class="ti-linkedin"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: Officers -->
     </div>
 
-<article>
-    <p>Meeting Sign In Form <a href = "https://docs.google.com/forms/d/e/1FAIpQLSfOl_apAhF9gF_uv9meJn-NUNaU_p87vp-fgcrhKJc0kj9tSA/viewform">here.</a></p>
-    
-    <p>Send in suggestions and request songs through our <a href="https://docs.google.com/forms/d/e/1FAIpQLSer3745BwkZs9SbjgZ9ghKmkrUEiWn3-czVb-x9GoWkqgxKdg/viewform">Feedback Form!</a></p> 
-    
-    <p><img src="http://www.jclibrary.org/images/newimages/maillist.png" width="100%">Join our mailing list through <a href="https://docs.google.com/forms/d/e/1FAIpQLSehOWK29pIEuFRNE6T-lAFR-4YfaokkWFAis0mw5potlABhzA/viewform">this</a> Google form!</p> 
-    
-    <p><img src="https://www.islandmediamanagement.com/wp-content/uploads/2017/05/facebook.png" width="100%">Join our Arcadia Coding Club 2017-2018 Facebook group <a href="https://www.facebook.com/groups/ahscodingclub/">here!</a></p> 
-    
-    <p>
-        <b>News</b>
-        <br>
-        <br>
-        <b>11/9/17</b>
-        <br>
-        The Kahoot and Bandit winners recieved candy and chocolate prizes! Also, the officers taught the basics of CSS and challenged club members to recreate a GIF using CSS and also create the worst website possible. 
-        <br>
-        Presentation <a href="https://docs.google.com/presentation/d/18TqqC8yRCHhIzjQse9zmEVKCAccTbZAWt4LBPM__pzQ/edit?usp=sharing">here.</a>
-        <br>
-        <br>
-        <b>11/2/17</b>
-        <br>
-        Learning about creating websites with HTML and reading source code to find a passwords.
-        <br>
-        Presentation <a href="https://docs.google.com/presentation/d/1li2IDCvs2Y_f8Ogu6ljsizJVaXN1EfkMHLtArg3y6ww/edit?usp=sharing">here.</a>
-        <br>
-        <br>
-        <b>10/26/17</b>
-        <br>
-        No meeting on 10/26 due to Common Core! 
-        <br>
-        <br>
-        <b>10/19/17</b>
-        <br>
-        Students poured into the classroom as the officers set up the presentation, music and sign-in station for the first meeting. With a packed room of at least 80 people, the officers introduced themselves, announced plans for the upcoming year and gave away free snacks. Afterwards, they hosted a coding-themed Kahoot to start off the year!
-        <br>
-Thank you to everyone who joined us at the first meeting! Come back next time to learn how to use HTML to code a website. 
-        <br>
-        Check out the first meeting's presentation <a href="https://docs.google.com/presentation/d/1Bdlm1jWz-6N1jjkUbPBg9g3qwOtq4uKq5aFSUaXmnXI/edit?usp=sharing">here</a>. 
-        <br>
-        <br>
-        <b>10/11/17</b>
-        <br>
-        During Club Day, well over a hundred students visited Coding Club's booth and signed up for the mailing list. Thanks for dropping by! The officer team looks forward to an amazing year with you all! 
-        <br>
-        <br>
-        <b>10/10/17</b>
-        <br>
-        Arcadia High School's Club Day will be held on October 10 and 11 at Lunch in the Rally Court! Coding Club will have a booth up on Wednesday, October 11. Stop by and say hi! Officers will be giving handouts and managing sign ups for the coming school year. If you aren't able to make it, feel free to come to our weekly lunch meetings, beginning on Thursday, October 26 in C108 at lunch. 
-        <br>
-        <br>
-        <b>4/25/17</b>
-        <br>
-        For the last Coding Club meeting of the 2016-2017 school year, the officers threw a party complete with great food and Kahoots. 
-        <br>
-        <br>
-        <b>4/18/17</b>
-        <br>
-        Four officers, Patrick Liu, Sandra Tang, Stella Saw and Samuel Berkun, volunteered at Field Elementary School's Science Night in Pasadena. They taught kids how to code through Hour of Code, Scratch, and HTML. Students also experienced playing Minecraft with a keyboard and monitor hooked up to a Raspberry Pi. Other organizations at the event include Cal Tech, JPL, Pasadena Audubon Society and USC. 
-        <br>
-        <br>
-        <b>4/18/17</b>
-        <br>
-        The new officers held their first meeting, introducing new additions including the new feedback form, this website, Raspberry Pi fundraising, volunteering, competitions and Code Day LA. There are also special plans for the last meeting next week! See the presentation <a href="https://docs.google.com/presentation/d/1-uLy4OLA2iG72mwMB3KRc8Qr8AEq3mTPl78aSyRH2XI/edit?usp=sharing">here</a>. 
-        <br>
-        <br>
-        <b>4/13/17</b>
-        <br>
-        Microsoft Educator Todd Beard and Senior Business Development Manager Brooke Haag visited Coding Club to introduce Micro:bits, programmable microcomputers. They taught students how to code simple programs and passed around more hardware examples like Raspberry Pis. Many thanks to them for coming all the way from the UK to Arcadia to spread their love of coding! Click <a href="https://www.facebook.com/pg/ArcadiaUnified/photos/?tab=album&album_id=1444332782307978">here</a> to see Arcadia Unified School District's Facebook albumn!
-        <br>
-        <br>
-        <b>3/30/17</b>
-        <br>
-        The new Coding Club 2017-2018 Officers have been announced! See the updated list in the "2017-2018 Officers" section to the left. 
-        <br>
-    </p>
-    
-    
-    <p class="hiding">
-    	You found a potato!
-        <br>
-        <br>
-        <img src="https://potatohack.files.wordpress.com/2016/12/d2be7-potato.gif" alt="potato" width=100%></img>
-    </p>
-    
-    
-</article>
-</div>
-<br>
+    <!-- Start: Footer -->
+    <footer class="footer1">
+        <div class="container">
+            <div class="row">
+                <!-- row -->
+                <div class="col-md-3">
+                    <!-- widgets column left -->
+                    <ul class="list-unstyled clear-margins">
+                        <!-- widgets -->
+                        <li class="widget-container widget_nav_menu">
+                            <!-- widgets list -->
+                            <h1 class="title-widget">Useful links</h1>
+                        </li>
+                    </ul>
+                </div>
+                <!-- widgets column left end -->
+                <div class="col-md-3">
+                    <!-- widgets column left -->
+                    <ul class="list-unstyled clear-margins">
+                        <!-- widgets -->
+                        <li class="widget-container widget_nav_menu">
+                            <!-- widgets list -->
+                            <ul>
+                                <li><a href="#"><span class="ti-github"></span> Fork this on GitHub</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- widgets column left end -->
+                <div class="col-md-3">
+                    <!-- widgets column left -->
+                    <ul class="list-unstyled clear-margins">
+                        <!-- widgets -->
+                        <li class="widget-container widget_nav_menu">
+                            <!-- widgets list -->
+                            <ul>
+                                <li><a href="#"><span class="ti-email"></span> Get our emails</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- widgets column left end -->
+                <div class="col-md-3">
+                    <!-- widgets column left -->
+                    <ul class="list-unstyled clear-margins">
+                        <!-- widgets -->
+                        <li class="widget-container widget_nav_menu">
+                            <!-- widgets list -->
+                            <ul>
+                                <li><a href="#"><span class="ti-facebook"></span> Our book of faces</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- widgets column left end -->
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="copyright">
+                        © 2017 <a href="http://ahscodingclub.com">ahscodingclub.com</a> | All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End: Footer -->
 
-    </body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/coderain.js"></script>
+    <!-- Google Analytics -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-29231762-2', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</body>
 
 </html>
