@@ -495,3 +495,8 @@ canvas {
 #information-tabs {
     text-align: left;
 }
+
+#maincontent {
+    padding-left: 50px;
+    padding-right: 50px;
+}
