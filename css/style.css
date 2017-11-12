@@ -35,12 +35,12 @@ a:visited {
 
 a,
 a:visited {
-    color: #00ad4a !important;
+    color: #00ad4a;
 }
 
 a:hover,
 a:focus {
-    color: #08dd5d !important;
+    color: #08dd5d;
 }
 
 /* Buttons override */
