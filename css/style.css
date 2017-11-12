@@ -57,8 +57,8 @@ a:focus {
     border-radius: 4px;
 }
 
-.btn-red {
-    background-color: #dd5138;
+.btn-blue {
+    background-color: #428bca;
     color: #fff;
 }
 
@@ -503,4 +503,8 @@ canvas {
 
 #checkin {
     color: #fff;
+}
+
+#logo {
+    font-size: 60px;
 }
