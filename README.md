@@ -1,9 +1,9 @@
 # AHS Coding Club
   Hosting the AHS Coding Club domain.
 ## Home
-#### Hero-Header Background
+### Hero-Header Background
   Background canvas animation is powered by JavaScript
-#### Check In
+### Check In
   Check In button redirects to "Coding Club Attendance Form" Google Form
 ## Information
   Consists of two tabs:  
