@@ -6,13 +6,12 @@
 #### Check In
   Check In button redirects to "Coding Club Attendance Form" Google Form
 ## Information
-  Consists of two tabs:
-    * Announcemnts
-      * Tag colors set using Bootstrap classes
-    * News
+  Consists of two tabs:  
+    * Announcemnts  
+      * Tag colors set using Bootstrap classes  
+    * News
 ## Officers
   Circularly crop profile pictures to 200 x 200 px in PNG format
-  Link updated images to <img src="img/name.png" class="officer-img">
 ### Useful Links
   Five column setup
   "Fork Us on Github" redirects to website repository at Sandra-Tang/Coding-Club
