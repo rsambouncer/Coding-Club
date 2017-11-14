@@ -1,0 +1,510 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    color: #404142;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 200;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+a:hover,
+a:focus,
+a:active,
+a:visited {
+    text-decoration: none;
+}
+
+a,
+a:visited {
+    color: #00ad4a;
+}
+
+a:hover,
+a:focus {
+    color: #08dd5d;
+}
+
+/* Buttons override */
+
+.btn {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btn-lg {
+    padding: 15px 40px;
+    font-size: 16px;
+    line-height: none;
+    border-radius: 4px;
+}
+
+.btn-blue {
+    background-color: #428bca;
+    color: #fff;
+}
+
+.btn-yellow {
+    background-color: #fcd93b;
+    color: #2a2a2a;
+    opacity: 0.8;
+}
+
+.btn-yellow:hover {
+    opacity: 1;
+}
+
+.btn-yellow.disabled:hover,
+.btn-yellow[disabled]:hover {
+    opacity: 0.65;
+}
+
+.content-ct {
+    text-align: center;
+}
+
+/* ------------------
+	Navigation
+------------------ */
+
+.side-menu {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-73px);
+    z-index: 99;
+}
+
+.side-menu ul li {
+    text-align: right;
+    margin: 10px 0;
+}
+
+.side-menu ul li a span {
+    display: inline-block;
+}
+
+.side-menu ul li a span.menu-title {
+    color: #fff;
+    position: relative;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    background-color: #f0ad4e;
+    padding: 3px 10px;
+    font-weight: 600;
+    border-radius: 3px;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+    -webkit-transform-origin: 100% 50%;
+    -moz-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    -o-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    opacity: 0;
+}
+
+.side-menu ul li a:hover span.menu-title {
+    opacity: 1;
+}
+
+.side-menu ul li a span.dot {
+    position: relative;
+    background-color: #f0ad4e;
+    border-radius: 2em;
+    height: 10px;
+    width: 10px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.side-menu ul li a:hover span.dot {
+    transform: scale(1.8);
+}
+
+
+.hero-header {
+    background: rgba(6, 173, 74, 0.8);
+    min-height: 600px;
+    padding: 5em;
+    color: #fff;
+}
+
+.hero-header h1,
+.hero-header h2,
+.hero-header h3,
+.hero-header h4,
+.hero-header h5,
+.hero-header h6 {
+    font-weight: 600;
+}
+
+.hero-header h1 {
+    margin: 1em 0 0 0;
+    font-weight: 600;
+}
+
+.hero-header h4 {
+    opacity: 0.8;
+    letter-spacing: 1px;
+    margin: 2em 0;
+    font-weight: 600;
+}
+
+.hero-header .logo {
+    max-width: 180px;
+}
+
+.hero-header .btn {
+    margin-top: 3em;
+}
+
+.hero-header .rocket {
+    max-width: 100%;
+}
+
+.me-row {
+    padding: 30px 0;
+}
+
+.row-title {
+    font-weight: 400;
+}
+
+.feature {
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.feature span {
+    font-size: 5em;
+    color: #016cc7;
+}
+
+.officer .feature {
+    width: 31.333333%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-right: 20px;
+    border: 3px solid #f6f6f6;
+    border-radius: 5px;
+}
+
+.officer .feature:hover {
+    box-shadow: 3px 3px 10px #ccc;
+    transform: translateY(-10px);
+}
+
+.officer-img {
+    max-width: 40%;
+    border: 4px solid #efefef;
+    border-radius: 50%;
+}
+
+ul.officer-social li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+ul.officer-social li a {
+    font-size: 0.2em;
+    padding: 0 10px;
+}
+
+ul.officer-social li a:hover {
+    text-decoration: none;
+}
+
+a span.ti-twitter-alt {
+    color: #4099ff;
+}
+
+.tickets {
+    background-color: #fcd93b;
+}
+
+.tickets .price {
+    font-size: 4em;
+    color: #dd5138;
+    font-weight: 100;
+}
+
+.tickets .price sup {
+    font-size: 0.4em;
+}
+
+
+.nav-tabs {
+    margin-top: 20px;
+}
+
+.schedule .media {
+    margin-top: 4em;
+}
+
+.schedule .media-object {
+    max-width: 100px;
+}
+
+.schedule .media-heading {
+    font-weight: 600;
+    border-bottom: 2px solid #efefef;
+    padding-bottom: 10px;
+}
+
+.schedule .media-body h5 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.footer1 {
+    background-color: #3a3a3a;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    width: 100%;
+    /*	border-top-width: 4px;
+	border-top-style: solid;
+	border-top-color: #003;*/
+}
+
+.title-widget {
+    color: #898989;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+    position: relative;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 25px;
+    margin-left: 0;
+    padding-left: 28px;
+}
+
+.title-widget::before {
+    background-color: #ea5644;
+    content: "";
+    height: 22px;
+    left: 0px;
+    position: absolute;
+    top: -2px;
+    width: 5px;
+}
+
+.widget_nav_menu ul {
+    list-style: outside none none;
+    padding-left: 0;
+}
+
+.widget_archive ul li {
+    background-color: rgba(0, 0, 0, 0.3);
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: 7px;
+    width: 3px;
+}
+
+.widget_nav_menu ul li {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    position: relative;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 7px;
+    padding-bottom: 7px;
+    width: 95%;
+}
+
+.title-median {
+    color: #636363;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0 0 15px;
+    text-transform: uppercase;
+}
+
+.footer-bottom {
+    background-color: #2a2a2a;
+    min-height: 30px;
+    width: 100%;
+}
+
+.copyright {
+    color: #fff;
+    line-height: 30px;
+    min-height: 30px;
+    padding: 7px 0;
+}
+
+.design {
+    color: #fff;
+    line-height: 30px;
+    min-height: 30px;
+    padding: 7px 0;
+    text-align: right;
+}
+
+.design a {
+    color: #fff;
+}
+
+.contact {
+    background-color: #3a3a3a;
+    color: #fff;
+    padding: 1em;
+}
+
+.contact h3 {
+    margin-bottom: 30px;
+}
+
+.form-control {
+    padding: 20px 15px;
+    border: 3px solid #eee;
+    background-color: #f9f9f9;
+    box-shadow: none;
+}
+
+.help-block {
+    font-size: 12px;
+}
+
+.form-control-feedback {
+    top: 15px;
+    right: 15px;
+}
+
+.animated {
+    animation: bounce 3s infinite alternate;
+    -webkit-animation: bounce 3s infinite alternate;
+}
+
+@-webkit-keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+.bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+}
+
+canvas {
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: absolute;
+    z-index: -5;
+}
+
+/* ========================================
+    Custom Media Queries
+======================================== */
+
+/* Mobile */
+
+@media (max-width: 767px) {
+    .hero-header {
+        padding: 3em 1em 1em 1em;
+        text-align: center;
+        max-height: 550px;
+    }
+    .officer .feature {
+        width: 100%
+    }
+    .footer-credit {
+        text-align: center;
+        padding: 40px 20px;
+    }
+    ul.footer-menu {
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
+
+/* iPad Portrait */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero-header {
+        padding: 3em 1em 1em 1em;
+        text-align: center;
+    }
+    .officer .feature {
+        width: 49%;
+        margin-right: 7px;
+    }
+    ul.footer-menu {
+        margin-top: 0;
+    }
+}
+
+
+/* iPad Landscape */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .officer .feature {
+        width: 49%;
+        margin-right: 9px;
+    }
+}
+
+/* ----------------------
+	ID Specific Styles
+---------------------- */
+
+#information-tabs {
+    text-align: left;
+}
+
+#maincontent {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#checkin {
+    color: #fff;
+}
+
+#logo {
+    font-size: 60px;
+}
