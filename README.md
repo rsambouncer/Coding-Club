@@ -35,7 +35,7 @@ There are no contributing guidelines (as of 12/7/2017). Fork and code away! Subm
 
 ## Copyright and Licenses
 
-### CNAME, css/styles.css, index.html, README.md
+### css/styles.css, index.html, js/coderain.js, README.md
 Code and documentation © 2017 [AHS Coding Club](http://ahscodingclub.com).
 
 ### Site design based on [Twitter Bootstrap](http://getbootstrap.com)
