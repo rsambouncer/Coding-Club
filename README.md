@@ -39,7 +39,7 @@ There are no contributing guidelines (as of 12/7/2017). Fork and code away! Subm
 Code and documentation © 2017 [AHS Coding Club](http://ahscodingclub.com).
 
 ### Site design based on [Twitter Bootstrap](http://getbootstrap.com)
-Bootstrap code and documentation © 2011-2016 [Twitter, Inc.](https://twitter.com) Code released under [the MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/twbs/bootstrap/blob/master/docs/LICENSE).
+Code and documentation © 2011-2016 [Twitter, Inc.](https://twitter.com) Code released under [the MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/twbs/bootstrap/blob/master/docs/LICENSE).
 
 ### Icons powered by [Themify Icons](https://themify.me/themify-icons)
 Themify Icons font licensed under: http://scripts.sil.org/OFL. Code licensed under: http://opensource.org/licenses/mit-license.html. All brand icons are copyright/trademarks of their respective owners.
